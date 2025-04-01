@@ -29,24 +29,24 @@ function contador() {
     var contador = document.getElementById('cont');
     contador.textContent = total;
 
-    if(total >= 80){
+    if (total >= 80) {
         document.getElementById('cont').style.color = 'red';
         document.getElementById('maximo').style.color = 'red';
-    } else if(total < 80 && total >=65){
+    } else if (total < 80 && total >= 65) {
         document.getElementById('cont').style.color = 'orange';
         document.getElementById('maximo').style.color = 'orange';
-    }else{
+    } else {
         document.getElementById('cont').style.color = 'green';
         document.getElementById('maximo').style.color = 'green';
     }
 }
 
-function upperCase(){
+function upperCase() {
     var txt = document.getElementById('inhome').value;
     var mostrar = document.getElementById('txt2');
     var resultado = '';
-    
-    for(var i = 0; i < txt.length; i++){
+
+    for (var i = 0; i < txt.length; i++) {
         var letra = txt[i];
         resultado += letra.toUpperCase();
     }
@@ -54,12 +54,12 @@ function upperCase(){
     mostrar.value = resultado;
 }
 
-function lowerCase(){
+function lowerCase() {
     var txt = document.getElementById('inhome').value;
     var mostrar = document.getElementById('txt2');
     var resultado = '';
-    
-    for(var i = 0; i < txt.length; i++){
+
+    for (var i = 0; i < txt.length; i++) {
         var letra = txt[i];
         resultado += letra.toLowerCase();
     }
@@ -67,8 +67,11 @@ function lowerCase(){
     mostrar.value = resultado;
 }
 
-function reset(){
+function reset() {
     var texto = document.getElementById('txt2');
     texto.value = '';
 }
 
+function sentenceCase() {
+
+}
