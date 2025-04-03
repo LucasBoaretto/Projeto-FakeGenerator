@@ -166,3 +166,31 @@ footer p span {
     transition: linear 0s;
     cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+    
+    header a {
+        font-size: 1.1em;
+    }
+
+    main {
+        margin: 10px 20px 10px 110px;
+
+    }
+
+    footer {
+        padding-left: 100px;
+    }
+
+    #burguer {
+        display: none;
+    }
+
+    #menu {
+        display: flex !important;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        
+    }
+
+}

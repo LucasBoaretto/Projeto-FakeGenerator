@@ -1,3 +1,6 @@
+const text = document.getElementById('inhome');
+
+
 function clickMenu() {
     if (menu.style.display == 'block') {
         menu.style.display = 'none';
@@ -7,12 +10,10 @@ function clickMenu() {
 }
 
 function toggleCase() {
-    var text = document.getElementById('inhome').value;
-    var mostrar = document.getElementById('txt2');
-
     var resultado = '';
-    for (var i = 0; i < text.length; i++) {
-        var letra = text[i];
+    let inputText = text.value;
+    for (let i = 0; i < inputText.length; i++) {
+        let letra = inputText[i];
         if (letra === letra.toUpperCase()) {
             resultado += letra.toLowerCase();
         } else {
@@ -42,12 +43,11 @@ function contador() {
 }
 
 function upperCase() {
-    var txt = document.getElementById('inhome').value;
-    var mostrar = document.getElementById('txt2');
-    var resultado = '';
+    let inputText = text.value;
+    let resultado = '';
 
-    for (var i = 0; i < txt.length; i++) {
-        var letra = txt[i];
+    for (let i = 0; i < inputText.length; i++) {
+        let letra = inputText[i];
         resultado += letra.toUpperCase();
     }
 
@@ -55,12 +55,11 @@ function upperCase() {
 }
 
 function lowerCase() {
-    var txt = document.getElementById('inhome').value;
-    var mostrar = document.getElementById('txt2');
+    let inputText = text.value;
     var resultado = '';
 
-    for (var i = 0; i < txt.length; i++) {
-        var letra = txt[i];
+    for (var i = 0; i < inputText.length; i++) {
+        var letra = inputText[i];
         resultado += letra.toLowerCase();
     }
 
