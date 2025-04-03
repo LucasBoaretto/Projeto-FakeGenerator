@@ -49,6 +49,7 @@
     padding: 12px 30px;
     opacity: 50%;
     cursor: not-allowed;
+    border-radius: 2px;
 }
 
 #animated {
@@ -110,6 +111,7 @@
     padding: 20px 20px;
     border-radius: 50%;
     box-shadow: none;
+    border: none;
 }
 
 #social {
@@ -135,7 +137,7 @@
 }
 
 #check:hover{
-    border: 2px solid rgba(29, 87, 2, 0.836);
+    box-shadow: 1px 1px 1px 1px rgba(29, 87, 2, 0.836);
     transition: none;
 }
 
@@ -178,7 +180,7 @@
     background-color: transparent;
     box-shadow: none;
     color:rgb(59, 216, 255);
-    padding: 13px 20px;
+    padding: 10px 30px;
     font-size: 1.5em;
 }
 
@@ -274,7 +276,7 @@
 #share{
     background-color: rgb(216, 216, 2);
     font-size: 1.3em;
-    padding: 3px 12px;
+    padding: 5px 12px;
     display: flex;
     border-radius: 5px;
 
@@ -319,6 +321,8 @@
     margin: 0px;
     font-size: 2em;
     cursor: pointer;
+    color: white;
+    border: none;
 }
 
 /*
