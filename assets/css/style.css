@@ -23,6 +23,10 @@ html, body {
     font-weight: 300;
 }
 
+header{
+    font-size: 1.2em;
+}
+
 header span {
     background-color: var(--cor3);
     padding: 4px;
@@ -39,6 +43,7 @@ header a {
     text-decoration: none;
     padding: 5px;
     margin-left: 10px;
+    font-size: 1.1em;
 }
 
 header a:hover {
