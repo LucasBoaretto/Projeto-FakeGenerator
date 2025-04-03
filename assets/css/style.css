@@ -43,7 +43,6 @@ header a {
     text-decoration: none;
     padding: 5px;
     margin-left: 10px;
-    font-size: 1.1em;
 }
 
 header a:hover {
@@ -72,9 +71,10 @@ main button {
     background-color: var(--cor3);
     border: 1px solid transparent;
     padding: 8px 20px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     border-radius: 2px;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.263);
+    width: 100%;
 }
 
 main button:hover {
@@ -113,8 +113,8 @@ footer p span {
 }
 
 #menu{
-    display: block;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #burguer{
