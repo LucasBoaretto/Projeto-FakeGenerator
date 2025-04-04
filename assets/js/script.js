@@ -148,7 +148,7 @@ function enviarCad() {
             return;
         }
 
-        if (telefone.value === '' || isNaN(telefone.value)) {
+        if (isNaN(telefone.value)) {
             alert('Telefone inválido, insira apenas números');
             telefone.value = '';
             return;
