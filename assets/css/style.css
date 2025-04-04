@@ -84,7 +84,7 @@ footer p span {
     font-weight: 400;
 }
 
-#inhome {
+#insertText {
     width: 99%;
     font-size: 1em;
     line-height: 1em;
@@ -114,7 +114,7 @@ footer p span {
     color: black;
 }
 
-#txt2 {
+#textAreaHome {
     color: #333333;
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
@@ -128,7 +128,7 @@ footer p span {
     cursor: default;
 }
 
-#txt2:hover {
+#textAreaHome:hover {
     background-color: #eeeeee;
 }
 
