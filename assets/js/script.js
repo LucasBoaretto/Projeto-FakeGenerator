@@ -24,6 +24,7 @@ function contador() {
     }
 }
 
+// Função que altera as letras minusculas para maiúsculas e vice-versa
 function toggleCase() {
     let inserir = document.getElementById('insertText');
     let mostrar = document.getElementById('textAreaHome');
@@ -137,8 +138,8 @@ function enviarCad() {
     let senha = document.getElementById('senha');
     let verificar = document.getElementById('verificar');
 
-    if (nome.value == '' && email.value == '' && telefone.value == '' && senha.value == '' && verificar.value =='') {
-        alert('Dados inválidos, preencha todos os campos!');
+    if (nome.value == '' && email.value == '' && senha.value == '' && verificar.value =='') {
+        alert('Dados inválidos, preencha todos os campos obrigatórios!');
         return;
     } else {
 
