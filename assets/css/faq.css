@@ -25,10 +25,10 @@ a{
 .faqTitle {
     font-size: 2em;
     font-weight: 700;
-    width: 100px;
-    border-bottom: 1px solid black;
-    margin-left: 170px;
+    margin: auto;
+    width: 1024px;
     padding-top: 40px;
+    text-decoration: underline;
 }
 
 .section {

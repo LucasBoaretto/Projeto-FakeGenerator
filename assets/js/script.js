@@ -1,4 +1,4 @@
-// Função que da funcionalidade para o botão "hamburguer" quando a tela está para celular
+// Função que abre e fecha o menu quando a tela estiver em modo mobile
 function clickMenu() {
     if (menu.style.display == 'block') {
         menu.style.display = 'none';
@@ -7,8 +7,9 @@ function clickMenu() {
     }
 }
 
-function faqListOpen(el) {
-    const faqItem = el.closest('.faqItem');
+// Função que abre e fecha algum dos tópicos da FAQ
+function faqListOpen(element) {
+    const faqItem = element.closest('.faqItem');
     const answer = faqItem.querySelector('.faqAnswer');
     const icon = faqItem.querySelector('.plusIcon');
 
@@ -76,6 +77,8 @@ function properCase() {
     mostrar.value = resultado;
 }
 
+
+// Função que coloca a primeira letra de cada frase em maiuscula
 function sentenceCase() {
     let inserir = document.getElementById('insertText');
     let mostrar = document.getElementById('textAreaHome');
@@ -93,6 +96,7 @@ function sentenceCase() {
     mostrar.value = resultado;
 }
 
+// Função que coloca o texto em maiusculo
 function upperCase() {
     let inserir = document.getElementById('insertText');
     let mostrar = document.getElementById('textAreaHome');
@@ -107,6 +111,7 @@ function upperCase() {
     mostrar.value = resultado;
 }
 
+// Função que coloca o texto em minusculo
 function lowerCase() {
     let inserir = document.getElementById('insertText');
     let mostrar = document.getElementById('textAreaHome');
@@ -121,6 +126,7 @@ function lowerCase() {
     mostrar.value = resultado;
 }
 
+// Função que coloca o texto em maiusculo e minusculo alternadamente
 function mixedCase() {
     let inserir = document.getElementById('insertText');
     let mostrar = document.getElementById('textAreaHome');
@@ -143,11 +149,13 @@ function mixedCase() {
     mostrar.value = resultado;
 }
 
+// Função que apaga o texto da textarea
 function reset() {
     var texto = document.getElementById('textAreaHome');
     texto.value = '';
 }
 
+// Função que valida os dados do formulário de cadastro
 function enviarCad() {
     let nome = document.getElementById('nome');
     let email = document.getElementById('email');
