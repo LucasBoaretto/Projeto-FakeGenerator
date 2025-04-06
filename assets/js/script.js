@@ -1,3 +1,4 @@
+// Função que da funcionalidade para o botão "hamburguer" quando a tela está para celular
 function clickMenu() {
     if (menu.style.display == 'block') {
         menu.style.display = 'none';
@@ -6,6 +7,21 @@ function clickMenu() {
     }
 }
 
+function faqListOpen(el) {
+    const faqItem = el.closest('.faqItem');
+    const answer = faqItem.querySelector('.faqAnswer');
+    const icon = faqItem.querySelector('.plusIcon');
+
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.innerHTML = '<i class="fa-solid fa-plus" style="color: #000000;"></i>';
+    } else {
+        answer.style.display = 'block';
+        icon.innerHTML = '<i class="fa-solid fa-minus" style="color: #000000;"></i>';
+    }
+}
+
+// Função que conta os caracteres do input da pagina principal e altera a cor de acordo com o número de caracteres
 function contador() {
     var conteudo = document.getElementById('insertText');
     var total = conteudo.value.length;
@@ -42,6 +58,7 @@ function toggleCase() {
     mostrar.value = resultado;
 }
 
+// Função que coloca a primeira letra de cada palavra do texto em maiuscula
 function properCase() {
     let inserir = document.getElementById('insertText');
     let mostrar = document.getElementById('textAreaHome');
@@ -138,7 +155,7 @@ function enviarCad() {
     let senha = document.getElementById('senha');
     let verificar = document.getElementById('verificar');
 
-    if (nome.value == '' && email.value == '' && senha.value == '' && verificar.value =='') {
+    if (nome.value == '' && email.value == '' && senha.value == '' && verificar.value == '') {
         alert('Dados inválidos, preencha todos os campos obrigatórios!');
         return;
     } else {
