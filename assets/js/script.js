@@ -164,36 +164,84 @@ function enviarCad() {
     let verificar = document.getElementById('verificar');
 
     if (nome.value == '' && email.value == '' && senha.value == '' && verificar.value == '') {
-        alert('Dados inválidos, preencha todos os campos obrigatórios!');
+        Swal.fire({
+            icon: "error",
+            title: "ERRO",
+            text: "Preencha todos os campos obrigatórios!"
+        });
         return;
     } else {
 
         if (nome.value.length < 3) {
-            alert('Nome inválido, insira um nome com no mínimo 3 letras!');
+            Swal.fire({
+                icon: "error",
+                title: "ERRO",
+                text: "Nome inválido, insira um nome com no mínimo 3 letras!!"
+            });
             nome.value = '';
             return;
         }
 
-        if (isNaN(telefone.value)) {
-            alert('Telefone inválido, insira apenas números');
+        else if (isNaN(telefone.value)) {
+            Swal.fire({
+                icon: "error",
+                title: "ERRO",
+                text: "Telefone inválido, insira apenas números"
+            });
             telefone.value = '';
             return;
         }
-        if (telefone.value.length < 10) {
-            alert('Telefone inválido, insira pelo menos 10 digitos!');
+        else if (telefone.value.length < 10) {
+            Swal.fire({
+                icon: "error",
+                title: "ERRO",
+                text: "Telefone inválido, insira pelo menos 10 digitos!"
+            });
             telefone.value = '';
             return;
         }
 
-        if (senha.value.length < 6) {
-            alert('Insira uma senha de no mínimo 6 digitos!');
+        else if (senha.value.length < 6) {
+            Swal.fire({
+                icon: "error",
+                title: "ERRO",
+                text: "Insira uma senha de no mínimo 6 digitos!"
+            });
             return;
         }
 
-        if (verificar.value !== senha.value) {
-            alert('As senhas não coincidem!');
+        else if (verificar.value !== senha.value) {
+            Swal.fire({
+                icon: "error",
+                title: "ERRO",
+                text: "As senhas não coincidem!"
+            });
             verificar.value = '';
             return;
+        }
+
+        else {
+            Swal.fire({
+                icon: "success",
+                title: "SUCESSO",
+                text: "Cadastro realizado com sucesso!"
+            });
+
+            const userData = {
+                nome: nome.value,
+                email: email.value,
+                telefone: telefone.value,
+                senha: senha.value
+            };
+    
+            const user = JSON.stringify(userData);
+            console.log(user);
+
+            nome.value = '';
+            email.value = '';
+            telefone.value = '';
+            senha.value = '';
+            verificar.value = '';
         }
     }
 }

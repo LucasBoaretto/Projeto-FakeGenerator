@@ -58,6 +58,11 @@ main>h1{
     color: var(--cor0);
 }
 
+.asterisk{
+    color: red;
+    font-size: 0.8em;
+}
+
 .campos{
     width: 300px;
     height: 35px;

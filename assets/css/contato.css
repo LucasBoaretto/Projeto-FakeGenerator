@@ -1,0 +1,74 @@
+
+.contactForm{
+    width: 100%;
+}
+
+.contactHead h1{
+    font-size: 1.5em;
+    font-weight: 300;
+    color: rgb(16, 14, 14)
+}
+
+.contactHead p{
+    font-size: 1em;
+    color: rgb(70, 70, 70);
+}
+
+.contactInputs{
+    width: 85%;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    outline: none;
+}
+
+.contactTextArea{
+    width: 85%;
+    margin: 10px;
+    margin-bottom: 2px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    outline: none;
+}
+
+.contactTextAreaLegend{
+    font-size: 0.8em;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    color: rgb(70, 70, 70);
+}
+
+.contactSendMessage{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color: #222D39;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contactSendMessage:hover{
+    background-color: #2A3747;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .contactForm{
+        width: 30%;
+    }
+
+    .contactInputs{
+        width: 100%;
+    }
+    .contactTextArea{
+        width: 100%;
+    }
+}
