@@ -6,7 +6,7 @@
 .contactHead h1{
     font-size: 1.5em;
     font-weight: 300;
-    color: rgb(16, 14, 14)
+    color: rgb(16, 14, 14);
 }
 
 .contactHead p{
@@ -64,7 +64,6 @@
     .contactForm{
         width: 30%;
     }
-
     .contactInputs{
         width: 100%;
     }
