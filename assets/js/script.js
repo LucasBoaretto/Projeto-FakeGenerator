@@ -155,7 +155,7 @@ function reset() {
     texto.value = '';
 }
 
-// Função que valida os dados do formulário de cadastro
+// Função que envia e valida os dados do formulário de cadastro
 function enviarCad() {
     let nome = document.getElementById('nome');
     let email = document.getElementById('email');
@@ -163,6 +163,7 @@ function enviarCad() {
     let senha = document.getElementById('senha');
     let verificar = document.getElementById('verificar');
 
+    // confere se os campos obrigatórios estão preenchidos 
     if (nome.value == '' && email.value == '' && senha.value == '' && verificar.value == '') {
         Swal.fire({
             icon: "error",
@@ -170,7 +171,7 @@ function enviarCad() {
             text: "Preencha todos os campos obrigatórios!"
         });
         return;
-    } else {
+    } else { // incia as validações
 
         // confere se o nome nao possui numeros
         for (let i = 0; i < nome.value.length; i++) {
