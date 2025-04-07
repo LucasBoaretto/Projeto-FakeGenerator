@@ -172,6 +172,20 @@ function enviarCad() {
         return;
     } else {
 
+        // confere se o nome nao possui numeros
+        for (let i = 0; i < nome.value.length; i++) {
+            if (!isNaN(nome.value[i])) {
+                Swal.fire({
+                    icon: "error",
+                    title: "ERRO",
+                    text: "Nome inválido, insira um nome que não seja um número!"
+                });
+                nome.value = '';
+                return;
+            }
+        }
+
+        //confere se o nome tem mais de 3 letras
         if (nome.value.length < 3) {
             Swal.fire({
                 icon: "error",
@@ -180,8 +194,9 @@ function enviarCad() {
             });
             nome.value = '';
             return;
-        }
 
+        }
+        // confere se o telefone é uma letra
         else if (isNaN(telefone.value)) {
             Swal.fire({
                 icon: "error",
@@ -191,6 +206,7 @@ function enviarCad() {
             telefone.value = '';
             return;
         }
+        //confere se o telefone tem mais de 10 digitos
         else if (telefone.value.length < 10) {
             Swal.fire({
                 icon: "error",
@@ -201,6 +217,7 @@ function enviarCad() {
             return;
         }
 
+        // confere se a senha tem mais de 6 digitos
         else if (senha.value.length < 6) {
             Swal.fire({
                 icon: "error",
@@ -210,6 +227,7 @@ function enviarCad() {
             return;
         }
 
+        // confere se a confirmação da senha é igual a senha
         else if (verificar.value !== senha.value) {
             Swal.fire({
                 icon: "error",
@@ -220,6 +238,7 @@ function enviarCad() {
             return;
         }
 
+        // "envia" o formulário se tudo estiver correto e cria um JSON com os dados do usuário
         else {
             Swal.fire({
                 icon: "success",
@@ -233,7 +252,7 @@ function enviarCad() {
                 telefone: telefone.value,
                 senha: senha.value
             };
-    
+
             const user = JSON.stringify(userData);
             console.log(user);
 
