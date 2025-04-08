@@ -15,12 +15,13 @@
 <body>
     <header>
         <h1 class="title"><span>FAKE</span> GENERATOR</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="biblioteca.html">Biblioteca</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contato.html">Contato</a>
-            <a href="formulario.html">Acesso</a>
+        <p class="navMenuPages" onclick="clickMenu(navBarPages)"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></p>
+        <nav class="navBarPages" id="navBarPages">
+            <div class="navItensPages"><a href="index.html"><i class="fa-solid fa-house fa-xs" style="color: #ffffff;"></i> Home</a></div>
+            <div class="navItensPages"><a href="biblioteca.html"><i class="fa-solid fa-book fa-xs" style="color: #ffffff;"></i> Biblioteca</a></div>
+            <div class="navItensPages"><a href="faq.html"><i class="fa-solid fa-person-circle-question fa-xs" style="color: #ffffff;"></i> FAQ</a></div>
+            <div class="navItensPages"><a href="contato.html"><i class="fa-solid fa-comments fa-xs" style="color: #ffffff;"></i> Contato</a></div>
+            <div class="navItensPages"><a href="formulario.html"><i class="fa-solid fa-arrow-right-to-bracket fa-xs" style="color: #ffffff;"></i> Acesso</a></div>
         </nav>
     </header>
     <main>
@@ -29,7 +30,7 @@
         <input type="text" name="pesquisa" id="insertText" placeholder="Insira seu texto aqui" maxlength="100"
             oninput="contador('insertText', 'cont', 'maximo', 80)" autocomplete="off">
         <p class="contador"><span id="cont">0</span><span id="maximo">/100</span></p>
-        <span class="material-symbols-outlined" id="burguer" onclick="clickMenu()">menu</span>
+        <span class="material-symbols-outlined" id="burguer" onclick="clickMenu(menu)">menu</span>
 
         <div id="menu">
             <div><button type="submit" class="botaoHome" onclick="toggleCase()">TOGGLE CASE</button></div>

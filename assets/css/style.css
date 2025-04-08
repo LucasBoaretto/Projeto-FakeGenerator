@@ -94,6 +94,8 @@ footer p span {
     outline: 0;
 }
 
+
+
 #menu {
     display: flex;
     flex-direction: column;
@@ -130,6 +132,26 @@ footer p span {
 
 #textAreaHome:hover {
     background-color: #eeeeee;
+}
+
+.navMenuPages{
+    background-color: var(--cor3);
+    color: white;
+    font-size: 1.2em;
+    padding: 5px;
+    text-align: center;
+}
+
+.navBarPages{
+    display: flex;
+    flex-flow: column;
+}
+
+.navItensPages{
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    font-size: 1.2em;
 }
 
 .title {
@@ -191,6 +213,23 @@ footer p span {
         flex-flow: row wrap;
         justify-content: space-between;
         
+    }
+
+    .navBarPages{
+        display: flex !important;
+        flex-flow: row nowrap;
+        justify-content: start;
+    }
+
+    .navItensPages{
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        font-size: 1em;
+    }
+
+    .navMenuPages{
+        display: none;
     }
 
 }

@@ -9,13 +9,9 @@
     --cor5: #362F40;
 }
 
-body,
-html {
-    font-family: "Open Sans", sans-serif;
-}
-
 main {
     max-width: 100vw;
+    font-family: "Open Sans", sans-serif;
 }
 
 a{

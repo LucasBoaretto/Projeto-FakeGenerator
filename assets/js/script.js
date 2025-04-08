@@ -1,9 +1,10 @@
 // Função que abre e fecha o menu quando a tela estiver em modo mobile
-function clickMenu() {
-    if (menu.style.display == 'block') {
-        menu.style.display = 'none';
+function clickMenu(element) {
+    const menu = document.getElementById(element);
+    if (element.style.display == 'block') {
+        element.style.display = 'none';
     } else {
-        menu.style.display = 'block';
+        element.style.display = 'block';
     }
 }
 
