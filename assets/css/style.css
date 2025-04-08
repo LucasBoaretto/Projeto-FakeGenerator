@@ -94,8 +94,6 @@ footer p span {
     outline: 0;
 }
 
-
-
 #menu {
     display: flex;
     flex-direction: column;
@@ -116,7 +114,7 @@ footer p span {
     color: black;
 }
 
-#textAreaHome {
+#getText {
     color: #333333;
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
@@ -130,7 +128,7 @@ footer p span {
     cursor: default;
 }
 
-#textAreaHome:hover {
+#getText:hover {
     background-color: #eeeeee;
 }
 
@@ -168,7 +166,6 @@ footer p span {
 .contador {
     margin-bottom: 30px;
     text-align: right;
-    color: green;
 }
 
 .botaoHome {
