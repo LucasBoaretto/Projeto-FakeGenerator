@@ -1,7 +1,5 @@
 
-.contactForm{
-    width: 100%;
-}
+
 
 .contactHead h1{
     font-size: 1.5em;
@@ -34,6 +32,7 @@
     font-size: 1.2em;
     border: 1px solid rgba(0, 0, 0, 0.329);
     outline: none;
+    resize: vertical;
 }
 
 .contactTextAreaLegend{
@@ -61,11 +60,8 @@
 
 @media screen and (min-width: 768px){
 
-    .contactForm{
+    .contactBox{
         width: 30%;
-    }
-    .contactInputs{
-        width: 100%;
     }
     .contactTextArea{
         width: 100%;

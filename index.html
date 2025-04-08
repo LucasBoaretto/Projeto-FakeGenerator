@@ -27,7 +27,7 @@
         <h2>Conversor de texto</h2>
         <p class="info">Insira o seu texto abaixo e escolha uma das opções disponíveis para formatar.</p>
         <input type="text" name="pesquisa" id="insertText" placeholder="Insira seu texto aqui" maxlength="100"
-            oninput="contador()" autocomplete="off">
+            oninput="contador('insertText', 'cont', 'maximo', 80)" autocomplete="off">
         <p class="contador"><span id="cont">0</span><span id="maximo">/100</span></p>
         <span class="material-symbols-outlined" id="burguer" onclick="clickMenu()">menu</span>
 

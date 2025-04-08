@@ -23,22 +23,23 @@ function faqListOpen(element) {
 }
 
 // Função que conta os caracteres do input da pagina principal e altera a cor de acordo com o número de caracteres
-function contador() {
-    var conteudo = document.getElementById('insertText');
-    var total = conteudo.value.length;
-    var contador = document.getElementById('cont');
-    contador.textContent = total;
+function contador(inputId, contId, maxId, maxValue) {
+    const content = document.getElementById(inputId);
+    const total = content.value.length;
+    const cont = document.getElementById(contId);
+    const max = document.getElementById(maxId);
 
-    if (total >= 80) {
-        document.getElementById('cont').style.color = 'red';
-        document.getElementById('maximo').style.color = 'red';
-    } else if (total < 80 && total >= 65) {
-        document.getElementById('cont').style.color = 'orange';
-        document.getElementById('maximo').style.color = 'orange';
-    } else {
-        document.getElementById('cont').style.color = 'green';
-        document.getElementById('maximo').style.color = 'green';
+    cont.textContent = total;
+
+    let color = 'green';
+    if (total >= maxValue){
+        color = 'red';
+    } else if (total >= maxValue - 15) {
+        color = 'orange';
     }
+
+    cont.style.color = color;
+    max.style.color = color;
 }
 
 // Função que altera as letras minusculas para maiúsculas e vice-versa
@@ -162,6 +163,11 @@ function enviarCad() {
     let telefone = document.getElementById('telefone');
     let senha = document.getElementById('senha');
     let verificar = document.getElementById('verificar');
+    const nameInput = document.getElementById('nome');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('telefone');
+    const passwordInput = document.getElementById('senha');
+    const confirmPasswordInput = document.getElementById('verificar');
 
     // confere se os campos obrigatórios estão preenchidos 
     if (nome.value == '' && email.value == '' && senha.value == '' && verificar.value == '') {
@@ -181,6 +187,7 @@ function enviarCad() {
                     title: "ERRO",
                     text: "Nome inválido, insira um nome que não seja um número!"
                 });
+                nameInput.style.borderColor = 'red';
                 nome.value = '';
                 return;
             }
@@ -193,6 +200,7 @@ function enviarCad() {
                 title: "ERRO",
                 text: "Nome inválido, insira um nome com no mínimo 3 letras!!"
             });
+            nameInput.style.borderColor = 'red';
             nome.value = '';
             return;
 
@@ -204,16 +212,18 @@ function enviarCad() {
                 title: "ERRO",
                 text: "Telefone inválido, insira apenas números"
             });
+            phoneInput.style.borderColor = 'red';
             telefone.value = '';
             return;
         }
         //confere se o telefone tem mais de 10 digitos
-        else if (telefone.value.length < 10) {
+        else if (telefone.value.length > 0 && telefone.value.length < 10) {
             Swal.fire({
                 icon: "error",
                 title: "ERRO",
                 text: "Telefone inválido, insira pelo menos 10 digitos!"
             });
+            phoneInput.style.borderColor = 'red';
             telefone.value = '';
             return;
         }
@@ -225,6 +235,8 @@ function enviarCad() {
                 title: "ERRO",
                 text: "Insira uma senha de no mínimo 6 digitos!"
             });
+            passwordInput.style.borderColor = 'red';
+            senha.value = '';
             return;
         }
 
@@ -235,6 +247,7 @@ function enviarCad() {
                 title: "ERRO",
                 text: "As senhas não coincidem!"
             });
+            confirmPasswordInput.style.borderColor = 'red';
             verificar.value = '';
             return;
         }
