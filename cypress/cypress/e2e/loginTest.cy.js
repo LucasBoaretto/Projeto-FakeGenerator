@@ -5,6 +5,7 @@ describe('Login', () => {
     // Act
     cy.get('#name').type('standard name')
     cy.get('#email').type('user@dominio.com.br')
+    cy.get('#phone').type('46912341234')
     cy.get('#password').type('password123')
     cy.get('#verify').type('password123')
     cy.get('#enviarFormulario').click()
