@@ -136,19 +136,22 @@ footer p span {
     background-color: var(--cor3);
     color: white;
     font-size: 1.2em;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid var(--cor0);
 }
 
 .navBarPages{
     display: flex;
     flex-flow: column;
+    padding: 0px;
 }
 
 .navItensPages{
     padding: 5px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cor0);
     font-size: 1.2em;
 }
 
@@ -216,6 +219,7 @@ footer p span {
         display: flex !important;
         flex-flow: row nowrap;
         justify-content: start;
+        padding: 5px;
     }
 
     .navItensPages{
