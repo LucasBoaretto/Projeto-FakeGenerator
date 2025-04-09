@@ -44,38 +44,37 @@ function contador(inputId, contId, maxId, maxValue) {
 
 // Função que altera as letras minusculas para maiúsculas e vice-versa
 function toggleCase(inputId, outputId) {
-    let inserir = document.getElementById(inputId);
-    let mostrar = document.getElementById(outputId);
+    let input = document.getElementById(inputId);
+    let output = document.getElementById(outputId);
 
-    let resultado = '';
-    for (let i = 0; i < inserir.value.length; i++) {
-        let letra = inserir.value[i];
-        if (letra === letra.toUpperCase()) {
-            resultado += letra.toLowerCase();
+    let result = '';
+    for (let i = 0; i < input.value.length; i++) {
+        let letter = input.value[i];
+        if (letter === letter.toUpperCase()) {
+            result += letter.toLowerCase();
         } else {
-            resultado += letra.toUpperCase();
+            result += letter.toUpperCase();
         }
     }
-
-    mostrar.value = resultado;
+    output.value = result;
 }
 
 // Função que coloca a primeira letra de cada palavra do texto em maiuscula
 function properCase(inputId, outputId) {
-    let inserir = document.getElementById(inputId);
-    let mostrar = document.getElementById(outputId);
+    let input = document.getElementById(inputId);
+    let output = document.getElementById(outputId);
 
-    let minusculo = inserir.value.toLowerCase();
-    let separar = minusculo.split(' ');
-    let resultado = '';
+    let lowercase = input.value.toLowerCase();
+    let slice = lowercase.split(' ');
+    let result = '';
 
-    for (let i = 0; i < separar.length; i++) {
-        if (separar[i]) {
-            separar[i] = separar[i].charAt(0).toUpperCase() + separar[i].slice(1);
+    for (let i = 0; i < slice.length; i++) {
+        if (slice[i]) {
+            slice[i] = slice[i].charAt(0).toUpperCase() + slice[i].slice(1);
         }
     }
-    resultado = separar.join(' ');
-    mostrar.value = resultado;
+    result = slice.join(' ');
+    output.value = result;
 }
 
 
@@ -175,18 +174,17 @@ function enviarCad(name, email, phone, password, confirmPassword) {
     } else { // incia as validações
 
         // confere se o nome nao possui numeros
-        for (let i = 0; i < nameInput.value.length; i++) {
-            if (!isNaN(nameInput.value[i])) {
-                Swal.fire({
-                    icon: "error",
-                    title: "ERRO",
-                    text: "Nome inválido, insira um nome que não seja um número!"
-                });
-                nameInput.style.borderColor = 'red';
-                nameInput.value = '';
-                return;
-            }
+        if (/\d/.test(nameInput.value)) {
+            Swal.fire({
+                icon: "error",
+                title: "ERRO",
+                text: "Nome inválido, insira um nome que não seja um número!"
+            });
+            nameInput.style.borderColor = 'red';
+            nameInput.value = '';
+            return;
         }
+
 
         //confere se o nome tem mais de 3 letras
         if (nameInput.value.length < 3) {
