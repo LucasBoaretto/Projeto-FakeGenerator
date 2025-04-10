@@ -155,6 +155,34 @@ function reset(outputId) {
     output.value = '';
 }
 
+function copy(outputId) {
+    const output = document.getElementById(outputId);
+    const text = output.value || output.innerText || output.textContent;
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Texto copiado!',
+                text: 'O conteúdo foi copiado para a área de transferência.',
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+                toast: true,
+                position: 'top-end',
+            });
+        })
+        .catch(err => {
+            console.error('Erro ao copiar:', err);
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro ao copiar!',
+                text: 'Tenta novamente ou confere o texto.',
+            });
+        });
+}
+
+
 function showErrorMessage(message) {
     Swal.fire({
         icon: "error",
