@@ -9,6 +9,7 @@ describe('Login', () => {
     cy.get('#password').type('password123')
     cy.get('#verify').type('password123')
     cy.get('#enviarFormulario').click()
+    cy.get('.swal2-confirm').click()
     // Assert
     // cy.on('window:alert', (alertText) => {
     //   expect(alertText).to.contains('Cadastro realizado com sucesso!')

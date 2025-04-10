@@ -49,11 +49,11 @@ function toggleCase(inputId, outputId) {
 
     let result = '';
     for (let i = 0; i < input.value.length; i++) {
-        let letter = input.value[i];
-        if (letter === letter.toUpperCase()) {
-            result += letter.toLowerCase();
+        let character = input.value[i];
+        if (character === character.toUpperCase()) {
+            result += character.toLowerCase();
         } else {
-            result += letter.toUpperCase();
+            result += character.toUpperCase();
         }
     }
     output.value = result;
@@ -80,79 +80,79 @@ function properCase(inputId, outputId) {
 
 // Função que coloca a primeira letra de cada frase em maiuscula
 function sentenceCase(inputId, outputId) {
-    let inserir = document.getElementById(inputId);
-    let mostrar = document.getElementById(outputId);
+    let input = document.getElementById(inputId);
+    let output = document.getElementById(outputId);
 
-    let minusculo = inserir.value.toLowerCase();
-    let separar = minusculo.split(/([.!?])/);
-    let resultado = '';
+    let minusculo = input.value.toLowerCase();
+    let slice = minusculo.split(/([.!?])/);
+    let result = '';
 
-    for (let i = 0; i < separar.length; i += 2) {
-        if (separar[i]) {
-            separar[i] = separar[i].charAt(0).toUpperCase() + separar[i].slice(1);
+    for (let i = 0; i < slice.length; i += 2) {
+        if (slice[i]) {
+            slice[i] = slice[i].charAt(0).toUpperCase() + slice[i].slice(1);
         }
     }
-    resultado = separar.join('');
-    mostrar.value = resultado;
+    result = slice.join('');
+    output.value = result;
 }
 
 // Função que coloca o texto em maiusculo
 function upperCase(inputId, outputId) {
-    let inserir = document.getElementById(inputId);
-    let mostrar = document.getElementById(outputId);
+    let input = document.getElementById(inputId);
+    let output = document.getElementById(outputId);
 
-    let resultado = '';
+    let result = '';
 
-    for (let i = 0; i < inserir.value.length; i++) {
-        let letra = inserir.value[i];
-        resultado += letra.toUpperCase();
+    for (let i = 0; i < input.value.length; i++) {
+        let character = input.value[i];
+        result += character.toUpperCase();
     }
 
-    mostrar.value = resultado;
+    output.value = result;
 }
 
 // Função que coloca o texto em minusculo
 function lowerCase(inputId, outputId) {
-    let inserir = document.getElementById(inputId);
-    let mostrar = document.getElementById(outputId);
+    let input = document.getElementById(inputId);
+    let output = document.getElementById(outputId);
 
-    var resultado = '';
+    var result = '';
 
-    for (var i = 0; i < inserir.value.length; i++) {
-        var letra = inserir.value[i];
-        resultado += letra.toLowerCase();
+    for (var i = 0; i < input.value.length; i++) {
+        var character = input.value[i];
+        result += character.toLowerCase();
     }
 
-    mostrar.value = resultado;
+    output.value = result;
 }
 
 // Função que coloca o texto em maiusculo e minusculo alternadamente
 function mixedCase(inputId, outputId) {
-    let inserir = document.getElementById(inputId);
-    let mostrar = document.getElementById(outputId);
+    let input = document.getElementById(inputId);
+    let output = document.getElementById(outputId);
 
-    let resultado = '';
+    let result = '';
     let j = 0;
-    for (let i = 0; i < inserir.value.length; i++) {
-        let letra = inserir.value[i];
-        if (letra === '') {
-            resultado += letra;
+    for (let i = 0; i < input.value.length; i++) {
+        let character = input.value[i];
+        if (character === '') {
+            result += character;
         } else {
             if (i % 2 == 0) {
-                resultado += letra.toUpperCase();
+                result += character.toUpperCase();
             } else {
-                resultado += letra.toLowerCase();
+                result += character.toLowerCase();
             }
         }
         j++;
     }
-    mostrar.value = resultado;
+    output.value = result;
 }
 
 // Função que apaga o texto da textarea
 function reset(outputId) {
-    var texto = document.getElementById(outputId);
-    texto.value = '';
+    var output = document.getElementById(outputId);
+    output.value = '';
 }
 
 function showErrorMessage(message) {
