@@ -44,7 +44,7 @@ header a {
     color: white;
     text-decoration: none;
     padding: 5px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 header a:hover {
@@ -140,6 +140,7 @@ footer p span {
     padding: 8px;
     text-align: center;
     width: 50px;
+    cursor: pointer;
 }
 
 .navBarPages{
@@ -150,9 +151,10 @@ footer p span {
 
 .navItensPages{
     padding: 5px;
-    padding-bottom: 10px;
     border-bottom: 1px solid var(--cor0);
     font-size: 1.2em;
+    display: flex;
+
 }
 
 .title {
