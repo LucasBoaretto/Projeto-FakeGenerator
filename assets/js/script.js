@@ -281,6 +281,12 @@ function enviarCad(name, email, phone, password, confirmPassword) {
         senha: passwordInput.value
     };
 
+    nameInput.style.borderColor = 'black';
+    emailInput.style.borderColor = 'black';
+    phoneInput.style.borderColor = 'black';
+    passwordInput.style.borderColor = 'black';
+    confirmPasswordInput.style.borderColor = 'black';
+
     const user = JSON.stringify(userData);
     console.log(user);
 
