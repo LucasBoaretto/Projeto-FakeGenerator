@@ -274,12 +274,6 @@ function enviarCad(name, email, phone, password, confirmPassword) {
         title: "SUCESSO",
         text: "Cadastro realizado com sucesso!"
     });
-    nameInput.style.borderColor = 'black';
-    emailInput.style.borderColor = 'black';
-    phoneInput.style.borderColor = 'black';
-    passwordInput.style.borderColor = 'black';
-    confirmPasswordInput.style.borderColor = 'black';
-
     const userData = {
         nome: nameInput.value,
         email: emailInput.value,
