@@ -130,14 +130,14 @@
     transition: transform 5s;
 }
 
-#check{
+#check {
     background-color: #00d26a;
     border-radius: 20%;
     height: 40px;
     width: 40px;
 }
 
-#check:hover{
+#check:hover {
     box-shadow: 1px 1px 1px 1px rgba(29, 87, 2, 0.836);
     transition: none;
 }
@@ -164,7 +164,7 @@
     transition: 0.25s;
 }
 
-#mail{
+#mail {
     background-color: var(--cor0);
     font-size: 1.3em;
     padding: 13px 20px;
@@ -172,25 +172,25 @@
     border-radius: 8px;
 }
 
-#mail:hover{
+#mail:hover {
     background-color: rgba(0, 0, 0, 0.545);
     transition: none;
 }
 
-#text{
+#text {
     background-color: transparent;
     box-shadow: none;
-    color:rgb(59, 216, 255);
+    color: rgb(59, 216, 255);
     padding: 10px 30px;
     font-size: 1.5em;
 }
 
-#text:hover{
+#text:hover {
     background-color: rgba(211, 211, 211, 0.26);
     transition: none;
 }
 
-#next{
+#next {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -201,27 +201,27 @@
     padding: 8px 20px;
 }
 
-#next:hover{
+#next:hover {
     background-color: rgb(146, 66, 9);
     transition: 0.2s;
 }
 
-#prev{
+#prev {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     font-size: 1.2em;
-    background-image: linear-gradient(to left, rgb(90, 90, 250), rgb(211, 3, 211) ,rgb(247, 90, 90));
+    background-image: linear-gradient(to left, rgb(90, 90, 250), rgb(211, 3, 211), rgb(247, 90, 90));
     border: 2.5px solid rgb(250, 71, 235);
     border-radius: 3px 0px 0px 30px;
     padding: 8px 20px;
 }
 
-#prev:hover{
-    background-image: linear-gradient(to right, rgb(90, 90, 250), rgb(211, 3, 211) ,rgb(247, 90, 90));
+#prev:hover {
+    background-image: linear-gradient(to right, rgb(90, 90, 250), rgb(211, 3, 211), rgb(247, 90, 90));
 }
 
-#arrow{
+#arrow {
     padding: 5px 35px;
     display: flex;
     flex-flow: row nowrap;
@@ -233,11 +233,11 @@
     box-shadow: none;
 }
 
-#arrow:hover{
+#arrow:hover {
     border: 2px dotted black;
 }
 
-#other1{
+#other1 {
     background-color: black;
     font-size: 1.2em;
     border-radius: 5px;
@@ -245,7 +245,7 @@
     box-shadow: 4px 4px 0px 0px white, 4px 4px 0px 1px black;
 }
 
-#other1:active{
+#other1:active {
     box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
     transition: linear 0.5s;
 }
@@ -256,7 +256,7 @@
     transform: translate(2px, 2px);
 }
 
-#other2{
+#other2 {
     background-image: linear-gradient(to bottom, #25b3b3, #593191);
     font-size: 1.2em;
     padding: 10px 50px;
@@ -265,7 +265,7 @@
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.521);
 }
 
-#other3{
+#other3 {
     background-color: transparent;
     color: black;
     font-size: 1.2em;
@@ -274,7 +274,7 @@
     box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.507);
 }
 
-#share{
+#share {
     background-color: rgb(216, 216, 2);
     font-size: 1.3em;
     padding: 5px 12px;
@@ -283,16 +283,17 @@
 
 }
 
-#help{
+#help {
     background-color: white;
     border-radius: 50%;
     padding: 10px 10px;
 }
 
-#help:hover{
+#help:hover {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.237);
     transition: none;
 }
+
 /*
     ESTILIZAÇÃO DE CLASSES
 */
@@ -324,6 +325,30 @@
     color: white;
     border: none;
 }
+
+.hex01 {
+    width:80px;
+    height: 70px;
+    position: relative;
+    clip-path: polygon(50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%);
+    background-color: black;
+    /* Cor da borda */
+}
+
+.hexagono {
+    width: 100%;
+    height: 100%;
+    background-color: #e91e63;
+    clip-path: inherit;
+    transform: scale(0.9);
+    /* "encolhe" o conteúdo pra formar a borda */
+}
+
 
 /*
     ESTILIZAÇÃO DE MEDIA QUERIES

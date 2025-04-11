@@ -133,7 +133,7 @@ footer p span {
     background-color: #eeeeee;
 }
 
-.navMenuPages{
+.navMenuPages {
     background-color: var(--cor0);
     color: white;
     font-size: 1.2em;
@@ -143,13 +143,13 @@ footer p span {
     cursor: pointer;
 }
 
-.navBarPages{
+.navBarPages {
     display: flex;
     flex-flow: column;
     padding: 0px;
 }
 
-.navItensPages{
+.navItensPages {
     padding: 5px;
     border-bottom: 1px solid var(--cor0);
     font-size: 1.2em;
@@ -192,7 +192,7 @@ footer p span {
 }
 
 @media screen and (min-width: 768px) {
-    
+
     header a {
         font-size: 1.1em;
     }
@@ -214,24 +214,24 @@ footer p span {
         display: flex !important;
         flex-flow: row wrap;
         justify-content: space-between;
-        
+
     }
 
-    .navBarPages{
+    .navBarPages {
         display: flex !important;
         flex-flow: row nowrap;
         justify-content: start;
         padding: 5px;
     }
 
-    .navItensPages{
+    .navItensPages {
         margin: 0px;
         padding: 0px;
         border: none;
         font-size: 1em;
     }
 
-    .navMenuPages{
+    .navMenuPages {
         display: none;
     }
 
