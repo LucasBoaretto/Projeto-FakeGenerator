@@ -8,7 +8,7 @@ function clickMenu(element) {
 }
 
 // Função que abre e fecha algum dos tópicos da FAQ
-function faqListOpen(element) {
+function faqListToggle(element) {
     const faqItem = element.closest('.faqItem');
     const answer = faqItem.querySelector('.faqAnswer');
     const icon = faqItem.querySelector('.plusIcon');
@@ -23,12 +23,12 @@ function faqListOpen(element) {
 }
 
 // Função que conta os caracteres do input da pagina principal e altera a cor de acordo com o número de caracteres
-function contador(inputId, contId, maxId, maxValue) {
+function counter(inputId, contId, maxId, maxValue) {
     const content = document.getElementById(inputId);
     const total = content.value.length;
     const cont = document.getElementById(contId);
     const max = document.getElementById(maxId);
-
+    
     cont.textContent = total;
 
     let color = 'green';
