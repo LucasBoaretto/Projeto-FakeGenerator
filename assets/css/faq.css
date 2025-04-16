@@ -67,7 +67,7 @@ a {
     padding-bottom: 16px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
 
     .section{
         padding: 0px 16px;

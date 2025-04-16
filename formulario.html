@@ -26,34 +26,34 @@
             <div class="navItensPages"><a href="formulario.html"><i class="fa-solid fa-arrow-right-to-bracket fa-xs" style="color: #ffffff;"></i> Acesso</a></div>
         </nav>
     <main>
-        <h1>Cadastro de usuário</h1>
-        <form action="#" method="get" autocomplete="off" class="login">
-            <div>
-                <label for="nome" class="titulo">Nome<span class="asterisk">*</span> </label>
-                <input type="text" name="nome" id="name" class="campos" minlength="3" placeholder="Nome completo" required>
-            </div>
-            <div>
-                <label for="email" class="titulo">E-mail<span class="asterisk">*</span> </label>
-                <input type="email" name="email" id="email" class="campos" placeholder="user@dominio.com.br" required>
-            </div>
-            <div>
-                <label for="telefone" class="titulo">Telefone(opcional) </label>
-                <input type="tel" name="telefone" id="phone" class="campos" placeholder="Ex: 46912341234" minlength="10" maxlength="11">
-            </div>
-            <div>
-                <label for="senha" class="titulo">Senha<span class="asterisk">*</span> </label>
-                <input type="password" name="senha" id="password" class="campos" minlength="6" placeholder="******" required>
-            </div>
-            <div>
-                <label for="verificar" class="titulo">Confirme<span class="asterisk">*</span> </label>
-                <input type="password" name="verificar" id="verify" class="campos" placeholder="******" required>
-            </div>
-            <div>
-                <input type="button" class="enviarForm" value="Enviar" id="enviarFormulario" onclick="enviarCad('name', 'email', 'phone', 'password', 'verify')">
-            </div>
-
-
-        </form>
+        <div class="formContainer">
+            <h1>Cadastro de usuário</h1>
+            <form action="#" method="get" autocomplete="off" class="login">
+                <div>
+                    <label for="nome" class="titulo">Nome<span class="asterisk">*</span> </label>
+                    <input type="text" name="nome" id="name" class="campos" minlength="3" placeholder="Nome completo" required>
+                </div>
+                <div>
+                    <label for="email" class="titulo">E-mail<span class="asterisk">*</span> </label>
+                    <input type="email" name="email" id="email" class="campos" placeholder="user@dominio.com.br" required>
+                </div>
+                <div>
+                    <label for="telefone" class="titulo">Telefone(opcional) </label>
+                    <input type="tel" name="telefone" id="phone" class="campos" placeholder="Ex: 46912341234" minlength="10" maxlength="11">
+                </div>
+                <div>
+                    <label for="senha" class="titulo">Senha<span class="asterisk">*</span> </label>
+                    <input type="password" name="senha" id="password" class="campos" minlength="6" placeholder="******" required>
+                </div>
+                <div>
+                    <label for="verificar" class="titulo">Confirme<span class="asterisk">*</span> </label>
+                    <input type="password" name="verificar" id="verify" class="campos" placeholder="******" required>
+                </div>
+                <div>
+                    <input type="button" class="enviarForm" value="Enviar" id="enviarFormulario" onclick="enviarCad('name', 'email', 'phone', 'password', 'verify')">
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
         <div>

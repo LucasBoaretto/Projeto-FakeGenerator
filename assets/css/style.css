@@ -176,7 +176,7 @@ footer p span {
     color: green;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
     main {
         margin: auto;
     }
@@ -205,11 +205,12 @@ footer p span {
         transition: linear 0.2s;
         display: block;
         font-size: 2em;
-        cursor: pointer;
+        
     }
 
     .navMenuPages i{
         padding-left: 10px;
+        cursor: pointer;
     }
     
     .navBarPages {

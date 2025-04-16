@@ -23,33 +23,31 @@ main {
 }
 
 
-main>h1 {
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    max-width: 420px;
-    border-radius: 15px 15px 0px 0px;
-    padding: 10px 40px 10px 40px;
+.formContainer {
+    margin: 20px auto;
+    width: 420px;
+    border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0px 0px 0px 1px #00000040;
-    background-color: var(--cor0);
     border: 1px solid var(--cor0);
+}
+
+.formContainer>h1 {
+    text-align: center;
+    padding: 10px 40px;
+    background-color: var(--cor0);
     color: white;
+    font-size: 1.8em;
+    border-bottom: 1px solid #00000040;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .login {
-    text-align: center;
-    margin: auto;
-    margin-top: 0px;
-    margin-bottom: 20px;
+    margin: 0;
     padding: 10px 40px 50px 40px;
-    max-width: 420px;
-    height: 430px;
+    border: none;
     border-radius: 0px 0px 15px 15px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    border: 1px solid var(--cor0);
+    height: auto;
 }
 
 .login>div {
@@ -102,20 +100,31 @@ main>h1 {
     border: 2px solid rgb(3, 185, 3);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
 
-    main{
+    main {
         width: 100%;
     }
 
-    main>h1 {
+    .formContainer>h1 {
         border-radius: 0px;
-        margin-top: 0;
     }
 
     .login {
         border-radius: 0px;
         border-radius: 0px 0px 5px 5px;
+        text-align: center;
+    }
+
+    .titulo{
+        margin-left: 50px;
+    }
+
+    .formContainer {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        
     }
 
 }
