@@ -11,6 +11,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "Work Sans", sans-serif;
 }
 
 html,
@@ -21,36 +22,17 @@ body {
     display: flex;
     flex-direction: column;
     font-weight: 300;
-    font-family: "Work Sans", sans-serif;
+    transition: 0.35s linear 0s;
 }
 
-header {
-    font-size: 1.2em;
-    background-color: var(--cor0);
+main{
+    margin: 10px 20px 10px 110px;
 }
 
 header span {
     background-color: var(--cor3);
     padding: 4px;
     border-radius: 5px;
-}
-
-header nav {
-    background-color: var(--cor3);
-    padding: 5px;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    margin-left: 5px;
-}
-
-header a:hover {
-    background-color: var(--cor2);
-    transition: 0.35s linear 0s;
-    border-radius: 3px;
 }
 
 main {
@@ -69,6 +51,7 @@ main h2 {
 footer {
     background-color: var(--cor4);
     padding: 10px;
+    padding-left: 100px;
     color: white;
     width: 100%;
     box-sizing: border-box;
@@ -97,13 +80,14 @@ footer p span {
 
 #menu {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 #burguer {
+    display: none;
     background-color: var(--cor3);
     color: white;
-    display: block;
     margin-bottom: 5px;
     text-align: center;
     padding: 10px;
@@ -133,28 +117,46 @@ footer p span {
     background-color: #eeeeee;
 }
 
-.navMenuPages {
-    background-color: var(--cor0);
-    color: white;
-    font-size: 1.2em;
-    padding: 8px;
-    text-align: center;
-    width: 50px;
-    cursor: pointer;
-}
-
 .navBarPages {
+    background-color: var(--cor3);
+    padding: 5px;
     display: flex;
-    flex-flow: column;
-    padding: 0px;
+    flex-flow: row nowrap;
+    font-size: 1.3em;
 }
 
-.navItensPages {
+.navBarPages a {
+    color: white;
+    text-decoration: none;
     padding: 5px;
-    border-bottom: 1px solid var(--cor0);
-    font-size: 1.2em;
-    display: flex;
+    margin-left: 10px;
+}
 
+.navBarPages a:hover {
+    background-color: var(--cor2);
+    transition: 0.35s linear 0s;
+    border-radius: 3px;
+}
+
+.navMenuPages {
+    display: none;
+}
+
+.botaoHome {
+    color: white;
+    font-size: 1em;
+    background-color: var(--cor3);
+    border: 1px solid transparent;
+    padding: 8px 20px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.263);
+}
+
+.botaoHome:hover {
+    background-color: var(--cor2);
+    transition: linear 0s;
+    cursor: pointer;
 }
 
 .title {
@@ -171,68 +173,78 @@ footer p span {
 .contador {
     margin-bottom: 30px;
     text-align: right;
+    color: green;
 }
 
-.botaoHome {
-    color: white;
-    font-size: 1em;
-    background-color: var(--cor3);
-    border: 1px solid transparent;
-    padding: 8px 20px;
-    margin-bottom: 5px;
-    border-radius: 2px;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.263);
-    width: 100%;
-}
-
-.botaoHome:hover {
-    background-color: var(--cor2);
-    transition: linear 0s;
-    cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-
-    header a {
-        font-size: 1.1em;
-    }
-
+@media screen and (max-width: 500px) {
     main {
-        margin: 10px 20px 10px 110px;
-
+        margin: auto;
     }
-
-    footer {
-        padding-left: 100px;
+    
+    footer{
+        padding-left: 10px;
     }
 
     #burguer {
-        display: none;
+        display: block;
     }
 
     #menu {
-        display: flex !important;
-        flex-flow: row wrap;
-        justify-content: space-between;
-
+        display: block;
     }
 
-    .navBarPages {
-        display: flex !important;
-        flex-flow: row nowrap;
-        justify-content: start;
-        padding: 5px;
-    }
-
-    .navItensPages {
-        margin: 0px;
-        padding: 0px;
-        border: none;
-        font-size: 1em;
+    .botaoHome{
+        width: 100%;
     }
 
     .navMenuPages {
-        display: none;
+        background-color: var(--cor0);
+        padding: 8px;
+        text-align: left;
+        width: 96.7%;
+        transition: linear 0.2s;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    .navMenuPages i{
+        padding-left: 10px;
+    }
+    
+    .navBarPages {
+        position: absolute;
+        padding: 0;
+        top: 121.6px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(38, 38, 38, 0.875);
+    }
+    
+    .navBarPages a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-items: center;
+        font-size: 1em;
+        padding: 2px 0px 2px 5px;
+        border-radius: 3px;
+    }
+
+    .navBarPages a:hover{
+        background-color: transparent;
+    }
+    
+    .navItensPages {
+        padding: 5px;
+        font-size: 1.5em;
+    }
+
+    .navItensPages:hover{
+        background-color: rgba(255, 255, 255, 0.233);   
     }
 
 }

@@ -12,6 +12,10 @@
     color: rgb(70, 70, 70);
 }
 
+.contactBox{
+    width: 30%;
+}
+
 .contactInputs{
     width: 85%;
     margin: 10px;
@@ -24,7 +28,7 @@
 }
 
 .contactTextArea{
-    width: 85%;
+    width: 100%;
     margin: 10px;
     margin-bottom: 2px;
     padding: 15px 20px;
@@ -58,12 +62,9 @@
 }
 
 
-@media screen and (min-width: 768px){
+@media screen and (max-width: 500px){
 
-    .contactBox{
-        width: 30%;
-    }
-    .contactTextArea{
-        width: 100%;
+    .contactInputBox{
+        width: 72vw;
     }
 }

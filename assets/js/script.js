@@ -1,11 +1,23 @@
 // Função que abre e fecha o menu quando a tela estiver em modo mobile
 function clickMenu(element) {
-    if (element.style.display == 'block') {
+    if (element.style.display === 'flex' || element.style.display === 'block') {
         element.style.display = 'none';
     } else {
-        element.style.display = 'block';
+        element.style.display = 'block'; // ou 'block' se preferir no mobile
     }
 }
+
+window.addEventListener("resize", () => {
+    const nav = document.getElementById("navBarPages");
+    const menu = document.getElementById('menu');
+    if (window.innerWidth > 500) {
+        nav.style.display = "flex";
+        menu.style.display = "flex";
+    } else {
+        nav.style.display = "none";
+        menu.style.display = "none";
+    }
+});
 
 // Função que abre e fecha algum dos tópicos da FAQ
 function faqListToggle(element) {
@@ -28,7 +40,7 @@ function counter(inputId, contId, maxId, maxValue) {
     const total = content.value.length;
     const cont = document.getElementById(contId);
     const max = document.getElementById(maxId);
-    
+
     cont.textContent = total;
 
     let color = 'green';
