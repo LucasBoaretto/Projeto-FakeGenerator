@@ -7,6 +7,8 @@ function clickMenu(element) {
     }
 }
 
+
+//garante que ao redimensionar a tela os botoes voltem como estavam antes
 window.addEventListener("resize", () => {
     const nav = document.getElementById("navBarPages");
     const menu = document.getElementById('menu');
@@ -194,7 +196,7 @@ function copy(outputId) {
         });
 }
 
-
+// função que controla a mensagem de erro
 function showErrorMessage(message) {
     Swal.fire({
         icon: "error",
@@ -203,14 +205,17 @@ function showErrorMessage(message) {
     });
 }
 
+// função que altera a borda do imput para vermelho
 function invalidStyle(input) {
     input.style.borderColor = 'red';
 }
 
+//função que altera a borda do imput para verde
 function validStyle(input) {
     input.style.borderColor = 'lightgreen';
 }
 
+//função que valida o nome
 function valName(input) {
     // confere se o nome nao possui numeros
     if (/\d/.test(input.value)) {
@@ -229,6 +234,7 @@ function valName(input) {
     return true;
 }
 
+//função que valida o email
 function valEmail(input) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -241,6 +247,7 @@ function valEmail(input) {
     return true;
 }
 
+//função que valida o telefone
 function valPhone(input) {
     // verifica se o campo está vazio
     if (input.value.trim() === '') {
@@ -265,6 +272,7 @@ function valPhone(input) {
     return true;
 }
 
+//função que valida a senha
 function valPassword(password, confirm) {
     // confere se a senha tem mais de 6 digitos
     if (password.value.length < 6) {
@@ -307,7 +315,7 @@ function enviarCad(name, email, phone, password, confirmPassword) {
     if (!valPhone(phoneInput)) return;
     if (!valPassword(passwordInput, confirmPasswordInput)) return;
 
-    // "envia" o formulário se tudo estiver correto e cria um JSON com os dados do usuário
+    // "envia" o formulário se tudo estiver correto e cria um JSON com os dados do usuário e exibe no console
 
     Swal.fire({
         icon: "success",
