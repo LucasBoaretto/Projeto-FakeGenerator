@@ -30,7 +30,7 @@
             <h1>Cadastro de usuário</h1>
             <form action="#" method="get" autocomplete="off" class="login">
                 <div>
-                    <label for="nome" class="titulo">Nome<span class="asterisk">*</span> </label>
+                    <label for="name" class="titulo">Nome<span class="asterisk">*</span> </label>
                     <input type="text" name="nome" id="name" class="campos" minlength="3" placeholder="Nome completo" required>
                 </div>
                 <div>
@@ -38,18 +38,18 @@
                     <input type="email" name="email" id="email" class="campos" placeholder="user@dominio.com.br" required>
                 </div>
                 <div>
-                    <label for="telefone" class="titulo">Telefone(opcional) </label>
+                    <label for="phone" class="titulo">Telefone(opcional) </label>
                     <input type="tel" name="telefone" id="phone" class="campos" placeholder="Ex: 46912341234" minlength="10" maxlength="11">
                 </div>
                 <div>
-                    <label for="senha" class="titulo">Senha<span class="asterisk">*</span> </label>
+                    <label for="password" class="titulo">Senha<span class="asterisk">*</span> </label>
                     <input type="password" name="senha" id="password" class="campos" minlength="6" placeholder="******" required>
                 </div>
                 <div>
-                    <label for="verificar" class="titulo">Confirme<span class="asterisk">*</span> </label>
+                    <label for="verify" class="titulo">Confirme<span class="asterisk">*</span> </label>
                     <input type="password" name="verificar" id="verify" class="campos" placeholder="******" required>
                 </div>
-                <div>
+                <div class="sendFormButton">
                     <input type="button" class="enviarForm" value="Enviar" id="enviarFormulario" onclick="enviarCad('name', 'email', 'phone', 'password', 'verify')">
                 </div>
             </form>

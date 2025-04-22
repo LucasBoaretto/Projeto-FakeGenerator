@@ -22,7 +22,6 @@ body {
     display: flex;
     flex-direction: column;
     font-weight: 300;
-    transition: 0.35s linear 0s;
 }
 
 main{
@@ -202,17 +201,15 @@ footer p span {
         padding: 8px;
         text-align: left;
         width: 96.7%;
-        transition: linear 0.2s;
         display: block;
         font-size: 2em;
-        
     }
 
     .navMenuPages i{
         padding-left: 10px;
         cursor: pointer;
     }
-    
+
     .navBarPages {
         position: absolute;
         padding: 0;
@@ -245,7 +242,6 @@ footer p span {
     }
 
     .navItensPages:hover{
-        background-color: rgba(255, 255, 255, 0.233);   
+        background-color: rgba(255, 255, 255, 0.233); 
     }
-
 }
