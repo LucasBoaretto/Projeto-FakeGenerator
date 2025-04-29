@@ -96,7 +96,7 @@ main {
     color: black;
     font-size: 0.8em;
     padding: 5px 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     border: 2px solid black;
 }
 
@@ -111,6 +111,5 @@ main {
         width: 100%;
         border-radius: 0;
     }
-
 
 }

@@ -1,0 +1,24 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "titulo": "Comprar leite",
+      "concluida": false
+    },
+    {
+      "id": 2,
+      "titulo": "Pagar contas",
+      "concluida": false
+    },
+    {
+      "id": 3,
+      "titulo": "Estudar programação",
+      "concluida": true
+    },
+    {
+      "id": 4,
+      "titulo": "Estudar JavaScript",
+      "concluida": false
+    }
+  ]
+}
