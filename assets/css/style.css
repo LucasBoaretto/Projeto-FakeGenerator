@@ -81,6 +81,7 @@ footer p span {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
 }
 
 #burguer {
