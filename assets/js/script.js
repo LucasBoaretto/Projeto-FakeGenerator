@@ -349,3 +349,4 @@ document.getElementById("formUser").addEventListener("submit", function (e) {
       confirmPasswordInput.value = "";
     });
 });
+//npx json-server --watch users.json --port 3000

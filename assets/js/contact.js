@@ -99,3 +99,4 @@ document.getElementById("formContact").addEventListener("submit", function (e) {
       emailInput.value = "";
     });
 });
+//npx json-server --watch contact.json --port 3000 
