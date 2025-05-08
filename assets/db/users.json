@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "6d07",
+      "nome": "Lucas Boaretto",
+      "email": "lcboaretto@hotmail.com",
+      "telefone": "",
+      "senha": "123456"
+    },
+    {
+      "id": "f86e",
+      "nome": "Lucas",
+      "email": "lcboaretto@hotmail.com",
+      "telefone": "",
+      "senha": "123456"
+    }
+  ]
+}

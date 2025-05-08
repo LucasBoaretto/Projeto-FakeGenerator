@@ -22,7 +22,7 @@
     <main>
         <div class="formContainer">
             <h1>Cadastro de usuário - teste </h1>
-            <form action="#" method="get" autocomplete="off" class="login">
+            <form action="#" method="get" autocomplete="off" class="login" id="formUser">
                 <div>
                     <label for="name" class="titulo">Nome<span class="asterisk">*</span> </label>
                     <input type="text" name="nome" id="name" class="campos" minlength="3" placeholder="Nome completo" required>
@@ -44,7 +44,7 @@
                     <input type="password" name="verificar" id="verify" class="campos" placeholder="******" required>
                 </div>
                 <div class="sendFormButton">
-                    <input type="button" class="enviarForm" value="Salvar" id="enviarFormulario" onclick="enviarCad('name', 'email', 'phone', 'password', 'verify')">
+                    <button type="submit" class="enviarForm" id="enviarFormulario">Salvar</button>
                 </div>
             </form>
         </div>
