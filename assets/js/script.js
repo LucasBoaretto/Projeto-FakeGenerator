@@ -348,6 +348,16 @@ document.getElementById("formUser").addEventListener("submit", function (e) {
         title: "Erro",
         text: "Não foi possível salvar os dados.",
       });
+      nameInput.style.borderColor = "black";
+      emailInput.style.borderColor = "black";
+      phoneInput.style.borderColor = "black";
+      passwordInput.style.borderColor = "black";
+      confirmPasswordInput.style.borderColor = "black";
+
+      nameInput.value = "";
+      emailInput.value = "";
+      phoneInput.value = "";
+      passwordInput.value = "";
+      confirmPasswordInput.value = "";
     });
-  console.log(userData);
 });
