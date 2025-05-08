@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css" />
     <title>Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="title"><span>FAKE</span> GENERATOR</h1>
-        <p class="navMenuPages"><i onclick="clickMenu(navBarPages)" class="fa-solid fa-bars " style="color: #ffffff;"></i></p>
+      <h1 class="title"><span>FAKE</span> GENERATOR</h1>
+      <p class="navMenuPages">
+        <i
+          onclick="clickMenu(navBarPages)"
+          class="fa-solid fa-bars"
+          style="color: #ffffff"
+        ></i>
+      </p>
     </header>
-    
+
     <nav class="navBarPages" id="navBarPages"></nav>
-    
+
     <main>
+      <div id="chart">
+        <div id="responsive-chart"></div>
+      </div>
     </main>
 
     <footer>
-        <div>
-            <p>&copy;2024 Gerador <span>Lucas Boaretto</span></p>
-        </div>
+      <div>
+        <p>&copy;2024 Gerador <span>Lucas Boaretto</span></p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/navBar.js"></script>
-</body>
+    <script src="./assets/js/dashboard.js"></script>
+  </body>
 </html>

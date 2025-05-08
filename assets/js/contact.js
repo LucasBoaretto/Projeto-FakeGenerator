@@ -4,6 +4,11 @@ function showErrorMessage(message) {
     icon: "error",
     title: "ERRO",
     text: message,
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    toast: true,
+    position: "top-end",
   });
 }
 
@@ -19,6 +24,7 @@ function validStyle(input) {
 
 //função que valida o nome
 function valName(input) {
+  console.log("Validando nome:", input.value);
   // confere se o nome nao possui numeros
   if (/\d/.test(input.value)) {
     showErrorMessage("Nome inválido, insira apenas letras!");
@@ -50,62 +56,46 @@ function valEmail(input) {
 }
 
 // Função que envia e valida os dados do formulário de cadastro
-function enviarCad(name, email) {
-  const nameInput = document.getElementById(name);
-  const emailInput = document.getElementById(email);
 
-  // confere se os campos obrigatórios estão preenchidos
-  if (nameInput.value == "" && emailInput.value) {
-    Swal.fire({
-      icon: "error",
-      title: "ERRO",
-      text: "Preencha todos os campos obrigatórios!",
-    });
-    return;
-  }
+document.getElementById("formContact").addEventListener("submit", function (e) {
+  e.preventDefault();
 
+  // Atribuindo as variáveis corretamente aos IDs dos campos
+  const nameInput = document.getElementById("contactName");
+  const emailInput = document.getElementById("contactEmail");
+  const subjectInput = document.getElementById("contactSubject");
+  const category = document.getElementById("category");
+  const message = document.getElementById("contactMessage");
+
+  // Confere se os campos obrigatórios estão preenchidos e são válidos
   if (!valName(nameInput)) return;
   if (!valEmail(emailInput)) return;
-
-  // "envia" o formulário se tudo estiver correto e cria um JSON com os dados do usuário e exibe no console
-
-  Swal.fire({
-    icon: "success",
-    title: "SUCESSO",
-    text: "Cadastro realizado com sucesso!",
-  });
-
-  document.getElementById("formUser").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const formData = new formData(this);
-    const userData = Object.fromEntries(formData.entries());
-
-    fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: { "Content-Type": "aplication/json" },
-      body: JSON.stringify(userData),
-    })
-      .then((res) => res.json())
-      .then((data) =>
-        Swal.fire({
-          icon: "success",
-          title: "SUCESSO",
-          text: "Cadastro realizado com sucesso!",
-        })
-      );
-  });
 
   const userData = {
     nome: nameInput.value,
     email: emailInput.value,
+    assunto: subjectInput.value,
+    categoria: category.value,
+    mensagem: message.value,
   };
 
-  nameInput.style.borderColor = "black";
-  emailInput.style.borderColor = "black";
+  fetch("http://localhost:3000/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(userData),
+  })
+    .then((res) => res.json())
+    .catch((err) => {
+      console.error("Erro ao salvar:", err);
+      Swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Não foi possível salvar os dados.",
+      });
+      nameInput.style.borderColor = "black";
+      emailInput.style.borderColor = "black";
 
-  const user = JSON.stringify(userData);
-  console.log(user);
-
-  nameInput.value = "";
-  emailInput.value = "";
-}
+      nameInput.value = "";
+      emailInput.value = "";
+    });
+});

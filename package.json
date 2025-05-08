@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "json-server": "^1.0.0-beta.3"
+  },
+  "dependencies": {
+    "apexcharts": "^4.7.0"
   }
 }

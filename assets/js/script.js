@@ -329,18 +329,6 @@ document.getElementById("formUser").addEventListener("submit", function (e) {
     body: JSON.stringify(userData),
   })
     .then((res) => res.json())
-    .then((data) =>
-      Swal.fire({
-        icon: "success",
-        title: "SUCESSO",
-        text: "Cadastro realizado com sucesso!",
-        showConfirmButton: false,
-        timer: 2000,
-        timerProgressBar: true,
-        toast: true,
-        position: "top-end",
-      })
-    )
     .catch((err) => {
       console.error("Erro ao salvar:", err);
       Swal.fire({

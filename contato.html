@@ -1,75 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta description="Este é um formulário de login">
-    <meta author="Lucas Luiz">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta description="Este é um formulário de login" />
+    <meta author="Lucas Luiz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fake Generator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/contato.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/contato.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="title"><span>FAKE</span> GENERATOR</h1>
-        <p class="navMenuPages" onclick="clickMenu(navBarPages)"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></p>
+      <h1 class="title"><span>FAKE</span> GENERATOR</h1>
+      <p class="navMenuPages" onclick="clickMenu(navBarPages)">
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+      </p>
     </header>
     <nav class="navBarPages" id="navBarPages"></nav>
     <main>
-        <!-- Site referência: https://www.pixpa.com/pt/contact-us -->
-        <section class="contactHead">
-            <h1>Vamos Conversar?</h1>
-            <p>Se você tiver alguma dúvida ou precisar de ajuda, preencha o formulário abaixo.<br> Fazemos o possível para responder em até 1 dia útil.</p>
-        </section>
+      <!-- Site referência: https://www.pixpa.com/pt/contact-us -->
+      <section class="contactHead">
+        <h1>Vamos Conversar?</h1>
+        <p>
+          Se você tiver alguma dúvida ou precisar de ajuda, preencha o
+          formulário abaixo.<br />
+          Fazemos o possível para responder em até 1 dia útil.
+        </p>
+      </section>
 
-        <div class="contactBox">
-            <form action="get" autocomplete="off" class="contactForm">
-                <div class="contactInputBox">
-                    <input type="text" name="nome" id="contactName" class="contactInputs" placeholder="Enter yout full name..." required>
-                </div>
-                <div class="contactInputBox">
-                    <input type="email" name="email" id="contactEmail" class="contactInputs"   placeholder="Enter your email..." required>
-                </div>
-                <div class="contactInputBox">
-                    <input type="text" name="subject" id="contactSubject"  class="contactInputs" placeholder="Enter the subject..." required>
-                </div>
-                <div class="contactInputBox">
-                    <select name="category" id="category" data-selected="false" class="contactInputs" required>
-                        <option value disabled selected>Select a category...</option>
-                        <option value="Product Questions (New Customer)">Product Questions (New Customer)</option>
-                        <option value="Product Support (Existing Customer)">Product Support (Existing Customer)</option>
-                        <option value="Feedback / Feature Request">Feedback / Feature Request</option>
-                        <option value="Advertising / Press Inquiries">Advertising / Press Inquiries</option>
-                        <option value="Business Inquiries">Business Inquiries</option>
-                        <option value="General Questions">General Questions</option>
-                        <option value="Report Abuse / Rights Infringement">Report Abuse / Rights Infringement</option>
-                    </select>
-                </div>
-                <div class="contactInputBox">
-                    <textarea name="message" id="contactMessage" rows="4" cols="10" placeholder="Enter your message..." class="contactTextArea" required oninput="contador('contactMessage', 'minValueContContato', 'maxValueContContato', 40)"></textarea>
-                    <legend class="contactTextAreaLegend">
-                        Message has to be minimum 40 characters. <span id="minValueContContato">0</span><span id="maxValueContContato">/40</span> character minimum
-                    </legend>
-                </div>
-                <div class="contactInputBox">
-                    <input type="button" value="Send Message" class="contactSendMessage" onclick="sendMessage()" id="sendMessage">
-                </div>
-            </form>
-        </div>
-        
+      <div class="contactBox">
+        <form
+          action="#"
+          method="get"
+          autocomplete="off"
+          class="contactForm"
+          id="formContact"
+        >
+          <div class="contactInputBox">
+            <input
+              type="text"
+              name="nome"
+              id="contactName"
+              class="contactInputs"
+              placeholder="*Enter yout full name..."
+              required
+            />
+          </div>
+          <div class="contactInputBox">
+            <input
+              type="email"
+              name="email"
+              id="contactEmail"
+              class="contactInputs"
+              placeholder="*Enter your email..."
+              required
+            />
+          </div>
+          <div class="contactInputBox">
+            <input
+              type="text"
+              name="subject"
+              id="contactSubject"
+              class="contactInputs"
+              placeholder="*Enter the subject..."
+              required
+            />
+          </div>
+          <div class="contactInputBox">
+            <select
+              name="category"
+              id="category"
+              data-selected="false"
+              class="contactInputs"
+              required
+            >
+              <option value disabled selected>Select a category...</option>
+              <option value="Product Questions (New Customer)">
+                Product Questions (New Customer)
+              </option>
+              <option value="Product Support (Existing Customer)">
+                Product Support (Existing Customer)
+              </option>
+              <option value="Feedback / Feature Request">
+                Feedback / Feature Request
+              </option>
+              <option value="Advertising / Press Inquiries">
+                Advertising / Press Inquiries
+              </option>
+              <option value="Business Inquiries">Business Inquiries</option>
+              <option value="General Questions">General Questions</option>
+              <option value="Report Abuse / Rights Infringement">
+                Report Abuse / Rights Infringement
+              </option>
+            </select>
+          </div>
+          <div class="contactInputBox">
+            <textarea
+              name="message"
+              id="contactMessage"
+              rows="4"
+              cols="10"
+              placeholder="*Enter your message..."
+              class="contactTextArea"
+              required
+              oninput="counter('contactMessage', 'minValueContContato', 'maxValueContContato', 40)"
+              minlength="40"
+            ></textarea>
+            <legend class="contactTextAreaLegend">
+              Message has to be minimum 40 characters.
+              <span id="minValueContContato">0</span
+              ><span id="maxValueContContato">/40</span> character minimum
+            </legend>
+          </div>
+          <div class="contactInputBox">
+            <button type="submit" class="contactSendMessage" id="sendMessage">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
     <footer>
-        <div>
-            <p>&copy;2024 Gerador <span>Lucas Boaretto</span></p>
-        </div>
+      <div>
+        <p>&copy;2024 Gerador <span>Lucas Boaretto</span></p>
+      </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/navBar.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/contact.js"></script>
+  </body>
 </html>
