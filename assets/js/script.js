@@ -300,53 +300,75 @@ function valPassword(password, confirm) {
 
 // Função que envia e valida os dados do formulário de cadastro
 
-document.getElementById("formUser").addEventListener("submit", function (e) {
-  e.preventDefault();
+document
+  .getElementById("enviarFormulario")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
 
-  // Atribuindo as variáveis corretamente aos IDs dos campos
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("phone");
-  const passwordInput = document.getElementById("password");
-  const confirmPasswordInput = document.getElementById("verify");
+    // Atribuindo as variáveis corretamente aos IDs dos campos
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("verify");
 
-  // Confere se os campos obrigatórios estão preenchidos e são válidos
-  if (!valName(nameInput)) return;
-  if (!valEmail(emailInput)) return;
-  if (!valPhone(phoneInput)) return;
-  if (!valPassword(passwordInput, confirmPasswordInput)) return;
-
-  const userData = {
-    nome: nameInput.value,
-    email: emailInput.value,
-    telefone: phoneInput.value,
-    senha: passwordInput.value,
-  };
-
-  fetch("http://localhost:3000/users", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(userData),
-  })
-    .then((res) => res.json())
-    .catch((err) => {
-      console.error("Erro ao salvar:", err);
-      Swal.fire({
-        icon: "error",
-        title: "Erro",
-        text: "Não foi possível salvar os dados.",
-      });
-      nameInput.style.borderColor = "black";
-      emailInput.style.borderColor = "black";
-      phoneInput.style.borderColor = "black";
-      passwordInput.style.borderColor = "black";
-      confirmPasswordInput.style.borderColor = "black";
-
-      nameInput.value = "";
-      emailInput.value = "";
-      phoneInput.value = "";
-      passwordInput.value = "";
-      confirmPasswordInput.value = "";
+    const results = fetch("http://localhost:3000/users", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
     });
-});
+
+    // Confere se os campos obrigatórios estão preenchidos e são válidos
+    if (!valName(nameInput)) return;
+    if (!valEmail(emailInput)) return;
+    if (!valPhone(phoneInput)) return;
+    if (!valPassword(passwordInput, confirmPasswordInput)) return;
+
+    const userData = {
+      nome: nameInput.value,
+      email: emailInput.value,
+      telefone: phoneInput.value,
+      senha: passwordInput.value,
+    };
+
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .catch((err) => {
+        console.error("Erro ao salvar:", err);
+        Swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Não foi possível salvar os dados.",
+        });
+        nameInput.style.borderColor = "black";
+        emailInput.style.borderColor = "black";
+        phoneInput.style.borderColor = "black";
+        passwordInput.style.borderColor = "black";
+        confirmPasswordInput.style.borderColor = "black";
+
+        nameInput.value = "";
+        emailInput.value = "";
+        phoneInput.value = "";
+        passwordInput.value = "";
+        confirmPasswordInput.value = "";
+      });
+
+    Swal.fire({
+      icon: "success",
+      title: "Enviado!",
+      text: "Usuário cadastrado com sucesso!",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      toast: true,
+      position: "top-end",
+    }).then(() => {
+      setTimeout(() => {
+        console.log("Resultados", results);
+      }, 3000);
+    });
+  });
 //npx json-server --watch users.json --port 3000

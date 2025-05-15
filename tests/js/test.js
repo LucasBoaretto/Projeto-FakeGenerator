@@ -1,3 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  Alerts.set("Teste de alerta<br>Parabéns!");
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   Alerts.set("Teste de alerta<br>Parabéns!");
+// });
