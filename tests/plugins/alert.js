@@ -47,7 +47,16 @@
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
-  alert("OLA");
+  const alertBox = document.createElement('div');
+  alertBox.className = "overlay";
+  alertBox.id = 'alertaPersonalizado';
+  alertBox.innerHTML = `<div class="custom-alert">
+      <p>Botão clicado<br>Pressione OK para sair!</p>
+      <button onclick="document.body.removeChild(document.getElementById('alertaPersonalizado'))">OK</button>
+    </div>`;
+
+  document.body.appendChild(alertBox)
 });
 
-console.log(btn);
+
+
